@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode');
             $table->string('nama');
-            $table->string('harga')->unsigned();
+            $table->string('harga');
             $table->integer('stok')->default(1)->unsigned();
             $table->timestamps();
         });
