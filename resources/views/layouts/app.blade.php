@@ -20,13 +20,58 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<style>
+    body {
+        background-color: #ffe6f2; /* pink soft */
+        font-family: "Nunito", sans-serif;
+    }
+
+    .navbar {
+        background-color: #ffb6d9 !important; /* pink navbar */
+    }
+
+    .navbar-brand, 
+    .nav-link {
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+
+    .nav-link:hover {
+        color: #ffe6f2 !important;
+    }
+
+    .btn-primary {
+        background-color: #ff6fb5;
+        border-color: #ff6fb5;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff4fa3;
+        border-color: #ff4fa3;
+    }
+
+    .btn-outline-primary {
+        color: #ff6fb5;
+        border-color: #ff6fb5;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #ff6fb5;
+        color: white;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 .125rem .25rem rgba(255, 105, 180, 0.3) !important;
+    }
+</style>
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Kasir') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
