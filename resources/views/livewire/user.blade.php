@@ -8,9 +8,10 @@
                     Semua Pengguna
                 </button>
                 <button wire:click="pilihMenu('tambah')"
-                    class="btn {{ $pilihanMenu == 'tambah' ? 'btn-primary' : 'btn-outline-primary' }}">
+                    class="btn {{ $pilihanMenu == 'tambah' ? 'btn-primary' : 'btn-outline-primary' }}"><i><img src="https://img.icons8.com/color/20/add--v1.png" alt=""></i>
                     Tambah Pengguna
                 </button>
+                
                 <button wire:loading class="btn btn-info">
                     Loading ...
                 </button>
@@ -19,12 +20,10 @@
         <div class="row">
             <div class="col-12">
                 @if($pilihanMenu == 'lihat')
-    <div class="card border-primary">
-        <div class="card-header">
-            Semua Pengguna
-        </div>
+    <div>
+        
         <div class="card-body">
-            <table class="table table-bordered">
+            <table>
                 <thead>
                     <th>No</th>
                     <th>Nama</th>
@@ -42,11 +41,13 @@
                                <td>
     <button wire:click="pilihEdit({{ $pengguna->id }})"
     class="btn {{ $pilihanMenu == 'edit' ? 'btn-primary' : 'btn-outline-primary' }}">
+     <img src="https://img.icons8.com/fluency-systems-filled/20/000000/edit.png">
     Edit Pengguna
 </button>
 
 <button wire:click="pilihHapus({{ $pengguna->id }})"
     class="btn {{ $pilihanMenu == 'hapus' ? 'btn-primary' : 'btn-outline-primary' }}">
+    <img src="https://img.icons8.com/color/20/000000/delete-forever.png">
     Hapus Pengguna
 </button>
 
