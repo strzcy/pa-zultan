@@ -1,23 +1,31 @@
+
 <div>
 <div class="container">
-<div class="row mt-2">
-<div class="col-12">
-@if(!$transaksiAktif)
-<button class="btn btn-primary" wire:click='transaksiBaru'>Transaksi Baru</button>
-@else
-<button class="btn btn-danger" wire:click='batalTransaksi'>Batalkan Transaksi</button>
-@endif
-<button class="btn btn-info" wire:loading>Loading ... </button>
-</div>
-</div>
+    <div class="row mt-2">
+        <div class="col-12">
+        @if(!$transaksiAktif)
+            <button class="btn btn-primary" wire:click='transaksiBaru'>Transaksi Baru</button>
+            @else
+            <button class="btn btn-danger" wire:click='batalTransaksi'>Batalkan Transaksi</button>
+            @endif
+            <button class="btn btn-info" wire:loading>Loading ... </button>
+        </div>
+    </div>
 @if ($transaksiAktif)
 <div class="row mt-2">
 <div class="col-8">
-<div class="card border-primary">
+<div >
 <div class="card-body">
-<h4 class="card-title">No Invoice : {{ $transaksiAktif->kode }}</h4>
+    <table>
+        <tr>
+            <th>
+                <h4 style="align+">No Invoice : {{ $transaksiAktif->kode }}</h4>
+
+            </th>
+        </tr>
+    </table>
 <input type="text" class="form-control" placeholder="No Invoice" wire:model.live='kode'>
-<table class="table table-bordered">
+<table>
 <thead>
 <tr>
 <th>No</th>
@@ -94,4 +102,3 @@ wire:click='transaksiSelesai'>Bayar</button>
 
 </div>
 </div>
-
