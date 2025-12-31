@@ -7,9 +7,9 @@
             class="btn {{ $pilihanMenu=='lihat' ? 'btn-primary' : 'btn-outline-primary' }}">
             Semua Produk 
         </button>
-        <button wire:click="pilihMenu('tambah')"
-            class="btn {{ $pilihanMenu=='lihat' ? 'btn-primary' : 'btn-outline-primary' }}">
-            Semua Produk 
+        <button wire:click="pilihMenu('tambah')" 
+            class="btn {{ $pilihanMenu=='lihat' ? 'btn-primary' : 'btn-outline-primary' }}"><i><img src="https://img.icons8.com/color/20/add--v1.png" alt=""></i>
+            Tambah Produk 
         </button>
         <button wire:loading class="btn btn-info">
             Loading ... 
@@ -19,12 +19,9 @@
     <div class="row">
         <div class="col-12">
             @if($pilihanMenu=='lihat')
-            <div class="card border-primary">
-                <div class="card-header">
-                    Semua Produk
-                </div>
+            <div>
                 <div class="card-body">
-                    <table class="table table-borsered">
+                    <table>
                         <thead>
                             <th>No</th>
                             <th>Kode</th>
@@ -42,16 +39,20 @@
                                 <td>{{ $produk->harga }}</td>
                                 <td>{{ $produk->stok }}</td>
                                 <td>
-                                    <button wire:click="pilihEdit({{ $produk->id }})"
-                                    class="btn {{ $pilihanMenu=='edit' ? 'btn-primary' : 'btn-outline-primary' }}" >
-                                    Edit Produk
-                                    </button>
+    <button wire:click="pilihEdit({{ $produk->id }})"
+        class="btn {{ $pilihanMenu=='edit' ? 'btn-primary' : 'btn-outline-primary' }}">
+        <img src="https://img.icons8.com/fluency-systems-filled/20/000000/edit.png">
+        Edit Produk
+    </button>
 
-                                    <button wire:click="pilihHapus({{ $produk->id }})"
-                                    class="btn {{ $pilihanMenu=='hapus' ? 'btn-primary' : 'btn-outline-primary' }}" >
-                                    Hapus Produk
-                                    </button>
-                                </td>
+    <button wire:click="pilihHapus({{ $produk->id }})"
+        class="btn {{ $pilihanMenu=='hapus' ? 'btn-primary' : 'btn-outline-primary' }}">
+        <img src="https://img.icons8.com/color/20/000000/delete-forever.png">
+        Hapus Produk
+    </button>
+</td>
+
+                                    
                             </tr>
                             @endforeach
                         </tbody>
