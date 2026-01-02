@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'KasirKU') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -25,6 +25,12 @@
         background-color: #ffe6f2; /* pink soft */
         font-family: "Nunito", sans-serif;
     }
+    table{width:90%;margin:20px auto;border-collapse:collapse;background:white;border-radius:15px;overflow:hidden;box-shadow:0 4px 10px #ffc3e1;}
+ th,td{padding:15px;text-align:left;}
+ th{background:#ff7fbf;color:white;}
+ .aksi button{padding:8px 10px;border:none;border-radius:8px;color:white;font-weight:600;cursor:pointer;}
+ .edit{background:#ffa3d4;}
+ .hapus{background:#ff4f70;}
 
     .navbar {
         background-color: #ffb6d9 !important; /* pink navbar */
